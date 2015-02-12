@@ -15,6 +15,6 @@ def index():
 def temp():
 	temp = tempdict['temp']
 	curtime = tempdict['time']
-	return curtime, " UTC\n", temp
+	return template('temp-server', curtime, temp)
 run(host='0.0.0.0', port=8080)
 
